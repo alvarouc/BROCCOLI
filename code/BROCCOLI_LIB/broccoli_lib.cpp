@@ -16526,7 +16526,7 @@ int BROCCOLI_LIB::UpdateInfomaxWeights(Eigen::MatrixXd & weights, Eigen::MatrixX
 		weights = weights + updateRate * tempI * weights;
 
 	    // Update the bias
-		bias = updateRate * *unmLogit * *ones;
+		bias += updateRate * *unmLogit * *ones;
 
 	    // Check if blows up
 	    double max = weights.maxCoeff();
