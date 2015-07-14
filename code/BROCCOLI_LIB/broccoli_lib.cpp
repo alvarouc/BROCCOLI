@@ -16639,7 +16639,7 @@ void BROCCOLI_LIB::InfomaxICA(Eigen::MatrixXd & whitenedData, Eigen::MatrixXd & 
 				printf("d weights norm is %f\n",(float)dWeights.norm());
 				printf("old d weights norm is %f\n",(float)oldDWeights.norm());
 
-		        angleDelta = acos(temp.sum() / sqrt(dWeights.norm() * oldDWeights.norm()));
+				angleDelta = acos(temp.sum() / (dWeights.norm() * oldDWeights.norm()));
 
 				printf("angle delta is %f\n",(float)angleDelta);
 
