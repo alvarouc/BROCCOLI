@@ -16626,7 +16626,7 @@ void BROCCOLI_LIB::InfomaxICA(Eigen::MatrixXd & whitenedData, Eigen::MatrixXd & 
 		{
 			dWeights = weights;	
 			dWeights -= oldWeights;
-		    change = dWeights.norm();
+		    change = dWeights.squaredNorm();
 	
 			if (step > 2)
 			{
